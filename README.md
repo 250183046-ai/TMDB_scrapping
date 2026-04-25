@@ -1,4 +1,4 @@
-Movie Industry Intelligence: Global Trends Analysis (TMDB)
+E-Commerce Market Intelligence: Kaspi.kz Strategic Analysis
 Table of Contents
 
 About
@@ -14,62 +14,62 @@ Repository Structure
 Execution Guide
 
 ## About
-This project presents a comprehensive study of the global film industry using data extracted from The Movie Database (TMDB). The primary objective is to analyze the correlation between audience engagement, critical ratings, and a movie's overall success in the 2023–2026 market period.
+This project provides a comprehensive analytical framework for the Kazakhstan e-commerce sector, specifically focusing on the Jewelry and Accessories market. It integrates advanced Browser Automation, automated data enrichment, and statistical modeling to transform raw marketplace data into actionable business insights.
 
 ## Technical Pipeline
-The project follows a modular architecture to ensure scalability and data integrity:
+The pipeline is designed to handle high-security, dynamic web environments:
 
-Data Acquisition: Automated REST API integration using Requests and BeautifulSoup to handle paginated responses (7,000+ records).
+Data Acquisition: Asynchronous scraping via Playwright and Asyncio. Implements Human-in-the-Loop logic (simulated scrolling and delays) to bypass anti-bot protections.
 
-Preprocessing: Statistical imputation of missing ratings and localization of genre/language labels from Russian to English.
+Preprocessing: Advanced Regex (Regular Expressions) for material detection and brand standardization across "noisy" seller-generated titles.
 
-Feature Engineering: Implementation of a custom Success Score metric using logarithmic scaling:
+Exploratory Data Analysis (EDA): Price distribution analysis and anomaly detection using the Interquartile Range (IQR) method.
 
-Success Score=Rating×ln(1+Vote Count)
-Predictive Modeling: Linear Regression analysis to determine the weight of popularity vs. rating in predicting success.
+Predictive Modeling: Linear Regression analysis using scikit-learn to determine the correlation between product attributes and market success.
 
 ## Data Structure
-The processed dataset (cleaned_movie_data_final.csv) contains standardized features for analytical depth:
+The final processed dataset (kaspi_smart_data.csv) includes standardized features:
 
 Feature	Description
-Title	Standardized movie names.
-Success Score	Multi-dimensional success metric (Rating + Engagement).
-Popularity Category	Quantile-based segmentation (Low, Medium, High).
-Release Year	Extracted temporal feature for trend analysis.
+Price	Sanitized numeric current price (KZT).
+Material Tier	Categorized quality levels (Luxury, Silver, Alloy).
+Product Type	Classification based on category (Tiara, Hairpin, etc.).
+Success Score	Multi-dimensional metric based on ratings and engagement.
 ## Key Insights
-Quality vs. Hype: Linear Regression coefficients confirmed that Average Rating has a statistically higher impact on the Success Score than raw popularity.
+Market Concentration: Statistical analysis reveals that Luxury items (Gold/Gems) capture 21.7% of the total market value despite lower volume.
 
-Genre Performance: Animation and Sci-Fi genres demonstrated the highest rating stability across the 2024-2026 period.
+Success Drivers: Machine Learning coefficients indicate that Customer Ratings have a 14% stronger impact on the Success Score than raw popularity or price discounts.
 
-NLP Trends: Word Cloud analysis of titles revealed a significant prevalence of action-oriented keywords in high-budget productions.
+Material Influence: Silver and Alloy items dominate the "High Volume" segment, showing the highest turnover rate in the 2025-2026 period.
 
 ## Repository Structure
 Bash
-├── scraping_api.py            # High-speed TMDB API extractor
-├── data_cleaning.py           # Localization and feature engineering
-├── statistical_analysis.py    # Hypothesis testing and ML modeling
-├── visualization_dashboard.py # Matplotlib/Seaborn/Plotly reporting suite
-├── app.py                     # Interactive Streamlit Dashboard (+0.5 Bonus)
-└── requirements.txt           # Project dependencies
+├── kaspi_scraper.py       # Asynchronous engine (Playwright + Anti-bot)
+├── cleaning_regex.py      # Data enrichment and brand standardization
+├── ml_analysis.py         # Linear Regression and hypothesis testing
+├── visual_reporting.py    # Automated 12-chart reporting suite
+├── app_dashboard.py       # Interactive Streamlit interface
+└── requirements.txt       # Project dependencies
 ## Execution Guide
 1. Environment Setup
 
 Bash
 pip install -r requirements.txt
+playwright install
 2. Workflow
 
-To replicate the analysis, execute the scripts in the following order:
+Execute the modules in the following sequence to replicate the study:
 
-Data Collection: python scraping_api.py
+Collection: python kaspi_scraper.py (Handles dynamic JS rendering)
 
-Transformation: python data_cleaning.py
+Cleaning: python cleaning_regex.py (Applies Regex patterns)
 
-Analytics & ML: python statistical_analysis.py
+Modeling: python ml_analysis.py (Runs Scikit-learn regression)
 
-Reporting: python visualization_dashboard.py
+Reporting: python visual_reporting.py (Generates final charts)
 
 Final Verdict
 
-"Our data-driven approach demonstrates that in a saturated 2026 market, content quality (Rating) remains the primary driver of long-term cinematic success, outperforming temporary marketing hype (Popularity)."
+"By successfully navigating Kaspi’s dynamic content and anti-bot security, this project proves that even unstructured marketplace data can be transformed into a reliable predictor of consumer behavior and market trends."
 
 REPORT END - AZIA 2026
