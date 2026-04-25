@@ -1,0 +1,20 @@
+# Data Processing
+pandas
+numpy
+
+# Web Scraping
+playwright
+beautifulsoup4
+requests
+
+# Visualization & Reporting
+seaborn
+matplotlib
+plotly
+wordcloud
+
+# Machine Learning
+scikit-learn
+
+# Console UI
+rich
