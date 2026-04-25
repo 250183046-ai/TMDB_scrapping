@@ -44,11 +44,17 @@ Material Influence: Silver and Alloy items dominate the "High Volume" segment, s
 
 ## Repository Structure
 Bash
+
 ├── kaspi_scraper.py       # Asynchronous engine (Playwright + Anti-bot)
+
 ├── cleaning_regex.py      # Data enrichment and brand standardization
+
 ├── ml_analysis.py         # Linear Regression and hypothesis testing
+
 ├── visual_reporting.py    # Automated 12-chart reporting suite
+
 ├── app_dashboard.py       # Interactive Streamlit interface
+
 └── requirements.txt       # Project dependencies
 ## Execution Guide
 1. Environment Setup
